@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Divine Prints | Contact</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-indigo-700 uppercase">Divine Prints</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-indigo-600 transition">Home</a>
+                <a href="gallery.html" class="hover:text-indigo-600 transition">Gallery</a>
+                <a href="about.html" class="hover:text-indigo-600 transition">Team</a>
+                <a href="contact.html" class="text-indigo-600 font-semibold">Contact</a>
+            </div>
+            <button id="mobile-btn" class="md:hidden text-2xl">☰</button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4 space-y-3">
+            <a href="index.html" class="block hover:text-indigo-600">Home</a>
+            <a href="gallery.html" class="block hover:text-indigo-600">Gallery</a>
+            <a href="about.html" class="block hover:text-indigo-600">Team</a>
+            <a href="contact.html" class="block text-indigo-600 font-bold">Contact</a>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-16">
+        <h1 class="text-4xl font-bold text-center mb-16 text-gray-900" data-aos="fade-down">Get In Touch</h1>
+
+        <div class="grid lg:grid-cols-2 gap-12">
+            <div class="bg-white p-8 rounded-xl shadow-xl" data-aos="fade-right">
+                <h2 class="text-2xl font-semibold mb-6 text-indigo-700">Contact Information</h2>
+                
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <span class="text-2xl mr-4">📞</span>
+                        <div>
+                            <p class="font-bold text-gray-700">Phone</p>
+                            <p><a href="tel:0545336801" class="hover:text-indigo-600">0545336801</a></p>
+                            <p><a href="tel:0555606812" class="hover:text-indigo-600">0555606812</a></p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <span class="text-2xl mr-4">📧</span>
+                        <div>
+                            <p class="font-bold text-gray-700">Email</p>
+                            <p><a href="mailto:richella9151@gmail.com" class="hover:text-indigo-600">richella9151@gmail.com</a></p>
+                            <p><a href="mailto:divineprints24@gmail.com" class="hover:text-indigo-600">divineprints24@gmail.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <span class="text-2xl mr-4">📍</span>
+                        <div>
+                            <p class="font-bold text-gray-700">Location</p>
+                            <p class="text-gray-600">Visit us at our main office for a consultation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="mt-10 space-y-4">
+                    <input type="text" placeholder="Your Name" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <input type="email" placeholder="Your Email" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <textarea placeholder="Message" rows="4" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+                    <button type="button" class="bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-indigo-800 transition w-full">Send Message</button>
+                </form>
+            </div>
+
+            <div class="bg-gray-200 rounded-xl overflow-hidden shadow-xl map-container min-h-[400px]" data-aos="fade-left">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254345.5478440938!2d-0.234375!3d5.55602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9084b2b7a773%3A0xbed14ed8650e2dd3!2sAccra%2C%20Ghana!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-white mt-auto py-10">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-xs text-gray-600">&copy; <span id="year"></span> Divine Prints. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        document.getElementById('mobile-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
